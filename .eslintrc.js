@@ -1,12 +1,16 @@
 module.exports = {
     'env': {
         'browser': true,
-        'es2021': true
+        'amd': true,
+        'node': true,
+        'es6': true
     },
     'extends': [
         'eslint:recommended',
         'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended'
+        'plugin:@typescript-eslint/recommended',
+        'prettier', 
+        'prettier/@typescript-eslint'
     ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
@@ -36,7 +40,8 @@ module.exports = {
         'semi': [
             'error',
             'always'
-        ]
+        ],
+        '@typescript-eslint/explicit-module-boundary-types': 'error'
     },
     'settings': {
         'react': {
