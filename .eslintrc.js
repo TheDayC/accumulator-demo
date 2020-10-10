@@ -37,5 +37,10 @@ module.exports = {
             'error',
             'always'
         ]
+    },
+    'settings': {
+        'react': {
+            'version': '16.13.1'
+        }
     }
 };
