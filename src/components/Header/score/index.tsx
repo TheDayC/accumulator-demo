@@ -2,7 +2,7 @@ import React from 'react';
 import astonVilla from '../../../../public/aston-villa.png';
 import liverpool from '../../../../public/liverpool.png';
 
-const score: React.FC = () => {
+const Score: React.FC = () => {
     return (
         <div className="score">
             <div className="league">Premier League</div>
@@ -17,7 +17,9 @@ const score: React.FC = () => {
                         <p>Liverpool</p>
                     </div>
                 </div>
-                <div className="phase"><span>FT</span></div>
+                <div className="phase">
+                    <span>FT</span>
+                </div>
                 <div className="scoreline">
                     <span className="background">
                         <span className="home">7</span>
@@ -29,4 +31,4 @@ const score: React.FC = () => {
     );
 };
 
-export default score;
+export default Score;
