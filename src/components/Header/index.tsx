@@ -1,7 +1,7 @@
 import React from 'react';
-import Navigation from './navigation';
 
 import Score from './score';
+import Navigation from './navigation';
 
 const Header: React.FC = () => {
     return (
