@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import {useSelector} from 'react-redux';
 import { Phase } from '../../../enums/stats';
 
@@ -43,8 +43,8 @@ const Stats: React.FC<IStatsProps> = ({phase}) => {
     const awayCornersByPhase = getStatByPhase(awayCorners, phase);
     const totalCorners = homeCornersByPhase + awayCornersByPhase;
 
-    const homeYellowCardsByPhase = getStatByPhase(homeCorners, phase);
-    const awayYellowCardsByPhase = getStatByPhase(awayCorners, phase);
+    const homeYellowCardsByPhase = getStatByPhase(homeYellowCards, phase);
+    const awayYellowCardsByPhase = getStatByPhase(awayYellowCards, phase);
 
     return (
         <div className="stats">

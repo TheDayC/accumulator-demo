@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import {getFixtures} from '../../services/fixtures';
@@ -11,16 +11,21 @@ import selector from './selector';
 
 const Body: React.FC = () => {
     const { hasMatch } = useSelector(selector);
+    const [currentPhase, savePhase] = useState(Phase.FullMatch);
 
     useEffect(() => {
         getFixtures();
     }, []);
 
+    const handleSwitchTab = (phase: Phase) => {
+        savePhase(phase);
+    }
+
     return (
         <main className="body">
             <h1>General</h1>
-            <Navigation />
-            {hasMatch && <Stats phase={Phase.FullMatch} />}
+            <Navigation switchTabs={handleSwitchTab} activeTab={currentPhase} />
+            {hasMatch && <Stats phase={currentPhase} />}
         </main>
     );
 };
