@@ -1,0 +1,16 @@
+@import '../../shared.scss';
+
+.body {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+
+    h1 {
+        font-size: 20px;
+        line-height: 1em;
+        margin: 0 0 20px 0;
+        color: $white;
+        font-weight: 600;
+        text-align: center;
+    }
+}

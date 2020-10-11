@@ -41,7 +41,8 @@ module.exports = {
             'error',
             'always'
         ],
-        '@typescript-eslint/explicit-module-boundary-types': 'error'
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        'react/prop-types': 0
     },
     'settings': {
         'react': {

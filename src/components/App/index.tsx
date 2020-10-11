@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from '../Header';
+import Body from '../Body';
 import './styles.scss';
 
 const App: React.FC = () => {
@@ -8,6 +9,7 @@ const App: React.FC = () => {
         <div className="App">
             <div className="container">
                 <Header />
+                <Body />
             </div>
         </div>
     );
