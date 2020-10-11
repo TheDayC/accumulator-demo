@@ -14,10 +14,10 @@ const navLinks: INavigation[] = [
 const Navigation: React.FC = () => {
     return (
         <nav className="navigation">
-            {navLinks.map(link => {
+            {navLinks.map((link, i) => {
                 if (link.href) {
                     return (
-                        <div className="navLink active">
+                        <div className="navLink active" key={`${link.title}-${i}`}>
                             <a href={link.href}>
                                 {link.title}
                             </a>
@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
                     );
                 } else {
                     return (
-                        <div className="navLink">
+                        <div className="navLink" key={`${link.title}-${i}`}>
                             <span>{link.title}</span>
                         </div>
                     );
