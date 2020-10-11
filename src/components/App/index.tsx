@@ -1,11 +1,14 @@
 import React from 'react';
 
-import Header from './components/Header';
+import Header from '../Header';
+import './styles.scss';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Header />
+            <div className="container">
+                <Header />
+            </div>
         </div>
     );
 };

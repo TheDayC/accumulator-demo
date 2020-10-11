@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.scss';
+
 const Score: React.FC = () => {
     return (
         <div className="score">

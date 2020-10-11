@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { INavigation } from '../../../types/navigation';
+import './styles.scss';
 
 const navLinks: INavigation[] = [
     { href: null, title: 'Overview' },
@@ -15,9 +17,9 @@ const Navigation: React.FC = () => {
             {navLinks.map(link => {
                 if (link.href) {
                     return (
-                        <div className="navLink">
+                        <div className="navLink active">
                             <a href={link.href}>
-                                <span>{link.title}</span>
+                                {link.title}
                             </a>
                         </div>
                     );
