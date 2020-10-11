@@ -1,13 +1,4 @@
-import { FixtureStatus} from '../enums/fixtures';
-
-interface ITeams {
-    home: string;
-    away: string;
-}
-
-export interface IFixture {
-    teams: ITeams;
-}
+import { FixtureStatus, StatType} from '../enums/fixtures';
 
 interface IContestant {
     '_id': string;
@@ -118,10 +109,10 @@ interface IPlayer {
     stats: IPlayerStats;
 }
 
-interface IStat {
+export interface IStat {
     fh: string;
     sh: string;
-    type: string;
+    type: StatType;
     value: string;
 }
 
