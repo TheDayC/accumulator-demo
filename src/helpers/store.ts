@@ -35,6 +35,6 @@ export function getStoreInstance(): IStore {
 
 export function createMatchState(): IFixturesState {
     return {
-        matches: null
+        fixtures: null
     };
 }
