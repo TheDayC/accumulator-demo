@@ -1,0 +1,136 @@
+@import '../../../shared.scss';
+
+.stats {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        .titles {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+            span {
+                font-size: 16px;
+                line-height: 1em;
+                color: $white;
+                font-weight: 600;
+            }
+        }
+
+        .values {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .valueContainer {
+                display:flex;
+                width: 50%;
+                height: 10px;
+                background-color: $med_blue;
+                margin: 0 5px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &:first-child {
+                    margin-left:0;
+                }
+                
+                &:last-child {
+                    margin-right:0;
+                }
+
+                &.home {
+                    justify-content: flex-end;
+
+                    .valueFill {
+                        background-color: $yellow;
+                    }
+                }
+                
+                &.away {
+                    .valueFill {
+                        background-color: $green;
+                    }
+                }
+
+                .valueFill {
+                    display: flex;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .team {
+            display: flex;
+            flex-direction: row;
+
+            .card {
+                display: flex;
+                flex-direction: row;  
+
+                .icon {
+                    display: flex;
+                    width: 10px;
+                    height: 15px;
+                    border-radius: 3px;
+                    
+                }
+
+                .count {
+                    font-size: 16px;
+                    line-height: 1em;
+                    color: $white;
+                }
+
+                &.yellow {
+                    .icon {
+                        background-color: $yellow;
+                    }
+                }
+                
+                &.red {
+                    .icon {
+                        background-color: $red;
+                    }
+                }
+            }
+
+            &.home {
+                .card {
+                    margin-right: 20px;             
+                }
+
+                .icon {
+                    margin-right: 10px;
+                }
+            }
+            
+            &.away {
+                .card {
+                    margin-left: 20px;
+                }
+
+                .icon {
+                    margin-left: 10px;
+                }
+
+            }
+        }
+    }
+}

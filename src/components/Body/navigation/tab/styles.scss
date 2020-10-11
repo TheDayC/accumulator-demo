@@ -1,0 +1,33 @@
+@import '../../../../shared.scss';
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    button {
+        background-color: $med_blue;
+        padding: 10px;
+        border-radius: 30px;
+        margin: 0 5px;
+        cursor: pointer;
+        color: $white;
+        font-size: 16px;
+        line-height: 1em;
+        transition: all 0.5s ease;
+        border: none;
+        width: 100%;
+
+        &:hover, &.active {
+            background-color: $yellow;
+            color: $dark_blue;
+            transition: all 0.5s ease;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    
+}
