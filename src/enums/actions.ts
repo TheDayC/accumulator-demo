@@ -1,3 +1,3 @@
 export enum FixtureActionTypes {
-    GET_MATCH_DATA = 'FIXTURE/GET_MATCH_DATA',
+    STORE_FIXTURES = 'FIXTURE/STORE_FIXTURES',
 }

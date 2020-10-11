@@ -4,12 +4,14 @@ export interface IFetchOptions extends RequestInit {
     body?: any;
 }
 
-export interface IBaseResponse {
-    success: boolean;
-    message?: string;
-    errorCode?: number;
+export type ServiceMethodTransform<TIn, TOut> = (response: IAPIResponse<TIn>) => TOut;
+
+export interface IServiceMethodConfig<TIn, TOut> extends RequestInit {
+    options?: IFetchOptions;
+    transform: ServiceMethodTransform<TIn, TOut>;
+    url: string;
 }
 
-export interface IAPIResponse<P> extends IBaseResponse {
+export interface IAPIResponse<P> {
     responsePayload: P;
 }

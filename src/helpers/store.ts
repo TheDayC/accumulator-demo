@@ -2,8 +2,9 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import { IAppState, IFixturesState, IStore } from '../types/store';
+import { IAppState, IStore } from '../types/store';
 import { fixturesReducer } from '../store/reducers/fixtures';
+import { IFixture } from '../types/fixtures';
 
 // Set up an over writable version of store so we can persist state for at least this session.
 let storeInstance: IStore;
@@ -16,7 +17,7 @@ const appReducer = combineReducers<IAppState>({
 // Create initial state
 export function createInitialState(): IAppState {
     return {
-        fixtures: createMatchState()
+        fixtures: createFixtureState()
     };
 }
 
@@ -33,8 +34,6 @@ export function getStoreInstance(): IStore {
     }
 }
 
-export function createMatchState(): IFixturesState {
-    return {
-        fixtures: null
-    };
+export function createFixtureState(): IFixture[] | null {
+    return null;
 }

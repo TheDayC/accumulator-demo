@@ -146,7 +146,7 @@ interface ILiveData {
     lineups: ILineup;
 }
 
-interface IMatch {
+export interface IMatch {
     id: string;
     description: string;
     data: Date;
@@ -159,7 +159,7 @@ interface IMatch {
     liveData: ILiveData;
 }
 
-interface IMarket {
+export interface IMarket {
     '_id': string;
     bookmaker: string;
     commonID: number;
@@ -176,11 +176,11 @@ interface IMarket {
     typeName: string;
 }
 
-export interface IFixtureResponse {
+export interface IFixtures {
     responseCode: string;
-    match: IMatch;
+    match: IMatch | null;
     betBuilderURL: string;
     givemeodds: any[];
     boosts: any[];
-    markets: IMarket[];
+    markets: IMarket[] | null;
 }
