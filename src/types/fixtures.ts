@@ -3,6 +3,6 @@ interface ITeams {
     away: string;
 }
 
-export interface IMatch {
+export interface IFixture {
     teams: ITeams;
 }

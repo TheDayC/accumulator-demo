@@ -2,21 +2,21 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import { IAppState, IMatchesState, IStore } from '../types/store';
-import { matchesReducer } from '../store/reducers/matches';
+import { IAppState, IFixturesState, IStore } from '../types/store';
+import { fixturesReducer } from '../store/reducers/fixtures';
 
 // Set up an over writable version of store so we can persist state for at least this session.
 let storeInstance: IStore;
 
 // Combine our reducers using the supplied map.
 const appReducer = combineReducers<IAppState>({
-    matches: matchesReducer
+    fixtures: fixturesReducer
 });
 
 // Create initial state
 export function createInitialState(): IAppState {
     return {
-        matches: createMatchState()
+        fixtures: createMatchState()
     };
 }
 
@@ -33,7 +33,7 @@ export function getStoreInstance(): IStore {
     }
 }
 
-export function createMatchState(): IMatchesState {
+export function createMatchState(): IFixturesState {
     return {
         matches: null
     };

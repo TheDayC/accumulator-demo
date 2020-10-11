@@ -1,16 +1,16 @@
 import { Store } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { IAction, IActionWithPayload } from './actions';
-import { IMatch } from './matches';
+import { IFixture } from './fixtures';
 
 export type IStore = Store<IAppState> & { dispatch: IDispatch };
 
 export type IDispatch = ThunkDispatch<IAppState, unknown, IActionWithPayload<string, unknown> | IAction<string>>;
 
 export interface IAppState {
-    matches: IMatchesState;
+    fixtures: IFixturesState;
 }
 
-export interface IMatchesState {
-    matches: IMatch[] | null;
+export interface IFixturesState {
+    fixtures: IFixture[] | null;
 }

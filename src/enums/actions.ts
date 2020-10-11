@@ -1,3 +1,3 @@
-export enum MatchActionTypes {
-    GET_MATCH_DATA = 'MATCHES/GET_MATCH_DATA',
+export enum FixtureActionTypes {
+    GET_MATCH_DATA = 'FIXTURE/GET_MATCH_DATA',
 }
