@@ -1,6 +1,4 @@
 import React from 'react';
-import astonVilla from '../../../../public/aston-villa.png';
-import liverpool from '../../../../public/liverpool.png';
 
 const Score: React.FC = () => {
     return (
@@ -9,11 +7,11 @@ const Score: React.FC = () => {
             <div className="details">
                 <div className="teams">
                     <div className="home">
-                        <img src={astonVilla} alt="Aston Villa" />
+                        <img src={`${process.env.PUBLIC_URL}/aston-villa.png`} alt="Aston Villa" />
                         <p>Aston Villa</p>
                     </div>
                     <div className="away">
-                        <img src={liverpool} alt="Liverpool" />
+                        <img src={`${process.env.PUBLIC_URL}/liverpool.png`} alt="Liverpool" />
                         <p>Liverpool</p>
                     </div>
                 </div>
