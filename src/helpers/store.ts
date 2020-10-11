@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 
 import { IAppState, IStore } from '../types/store';
 import { fixturesReducer } from '../store/reducers/fixtures';
-import { IFixture } from '../types/fixtures';
+import { IFixtures } from '../types/fixtures';
 
 // Set up an over writable version of store so we can persist state for at least this session.
 let storeInstance: IStore;
@@ -34,6 +34,6 @@ export function getStoreInstance(): IStore {
     }
 }
 
-export function createFixtureState(): IFixture[] | null {
+export function createFixtureState(): IFixtures | null {
     return null;
 }

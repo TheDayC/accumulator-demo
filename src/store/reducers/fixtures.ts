@@ -1,9 +1,9 @@
 import { createFixtureState } from '../../helpers/store';
 import { IActionWithPayload } from '../../types/actions';
 import { FixtureActionTypes } from '../../enums/actions';
-import { IFixture } from '../../types/fixtures';
+import { IFixtures } from '../../types/fixtures';
 
-export function fixturesReducer(state: IFixture[] | null = createFixtureState(), action: IActionWithPayload<FixtureActionTypes, any>): IFixture[] | null {
+export function fixturesReducer(state: IFixtures | null = createFixtureState(), action: IActionWithPayload<FixtureActionTypes, any>): IFixtures | null {
     switch (action.type) {
         case FixtureActionTypes.STORE_FIXTURES:
             return action.payload;
