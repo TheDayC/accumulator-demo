@@ -1,29 +1,33 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import './styles.scss';
+import selector from './selector';
 
 const Score: React.FC = () => {
+    const { homeName, awayName, status, homeGoals, awayGoals } = useSelector(selector);
+
     return (
         <div className="score">
             <div className="league">Premier League</div>
             <div className="details">
                 <div className="teams">
                     <div className="home">
-                        <img src={`${process.env.PUBLIC_URL}/aston-villa.png`} alt="Aston Villa" />
-                        <p>Aston Villa</p>
+                        {homeName && <img src={`${process.env.PUBLIC_URL}/aston-villa.png`} alt="Aston Villa" />}
+                        <p>{homeName}</p>
                     </div>
                     <div className="away">
-                        <img src={`${process.env.PUBLIC_URL}/liverpool.png`} alt="Liverpool" />
-                        <p>Liverpool</p>
+                        {awayName && <img src={`${process.env.PUBLIC_URL}/liverpool.png`} alt="Liverpool" />}
+                        <p>{awayName}</p>
                     </div>
                 </div>
                 <div className="phase">
-                    <span>FT</span>
+                    <span>{status}</span>
                 </div>
                 <div className="scoreline">
                     <span className="background">
-                        <span className="home">7</span>
-                        <span className="away">2</span>
+                        <span className="home">{homeGoals}</span>
+                        <span className="away">{awayGoals}</span>
                     </span>
                 </div>
             </div>
